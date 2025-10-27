@@ -26,7 +26,7 @@ def main():
     # print(f'11: c1.add("三", "五")\t\t-> {c1.add("三", "五")}')
 
     # set True to run the examples from the expression list
-    _run_list=False
+    _run_list=True
     expr=[
         'c1.add("1", "1.600")',         # 2.6
         'c1.add("three", "1.600")',     # 4.6
