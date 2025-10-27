@@ -1,0 +1,40 @@
+1. What is the project scaffold?
+The project scaffold is the standardized directory for a software project. It dictates where source code, tests, documentation, configuration files, and build artifacts should reside. For the "py-fun" project, the scaffold includes directories like src, tests, docs, and files like main.py, makefile, and requirements.txt.
+
+2. What is a software build process?
+A software build process is a set of steps required to take the project's source code and convert it into an executable application, a distributable package, or a library. This process must be defined and communicated so the project can be "built" from scratch at any time.
+
+3. When does the software build process start and when does it end?
+The software build process typically starts when a developer initiates the build command (e.g., running with python3, npm for javascript, make or mvn packages). It ends when the required build artifacts (e.g., a .jar file, a Python package, or any app) have been successfully created, launched, or when the process terminates due to an error.
+
+4. What are steps and what is the result of the software build process?
+1. The system first checks your project for any external libraries it needs (like packages listed in a requirements.txt file). If they're missing, they are fetched and installed.
+2. Converting source code into machine-readable code. For Python, it compiled to bytecode.
+3. Running automated unit tests are executed to verify that the code works correctly with no bugs.
+4. Release the tested and approved software to the end users or production environment.
+
+Result of the Software Build Process:
+This is the final, usable product/application, a library, or a software package that can be distributed, installed, and executed by end-users or other developers.
+
+5. What is make?
+Make automatically determines which pieces of a program need to be recompiled or rebuilt and have commands to rebuild them. It reads instructions from a file, traditionally called a makefile, which specifies the commands needed to build the target outputs. In short, make is an incredibly useful tool for defining generic tasks for your project.
+
+6. What is the purpose of file requirements.txt? How is it used?
+The purpose of the requirements.txt file is to list the external dependencies (libraries or packages) that the Python project needs to run, typically used during the setup or deployment of the project. 
+We need to run the command pip install -r requirements.txt to automatically install all the necessary dependencies listed in the file.
+
+7. What is a Build Server? What does it mean for Python?
+A Build Server is a dedicated server or a service (often part of a CI/CD) that is responsible for automatically running the software build process. Its primary function is to continuously or regularly create build artifacts, often triggered by changes committed/merged to the source code repository. 
+For Python, a Build Server automates tasks like what discussed in steps of build process.
+
+8. What are Nightly Builds?
+Nightly Builds are a specific practice where a build server runs the complete build process once every night (or any specific scheduled time). The resulting build artifact is known as the "nightly build." The main goal is to integrate all the code changes made during the previous day, test the integrated state, and detect any integration issues early.
+
+9. What are the differences between "Scripts, Modules, Packages, and Libraries" in Python?
+Script: A Python file intended to be run, by interpreter or command line to perform a task.
+Module: Any single Python file (.py) containing reusable functions, classes, and variables.
+Package: A collection of Python modules organized into a directory hierarchy. A package is a directory containing multiple modules and a special file named __init__.py. Example: calculator directory in our pyfun project.
+Library: A collection of packages or modules, got a set of prewritten classes or functions for specific purpose. Library is designed to be imported and reused.
+
+10. What is __init__.py meant to be used for?
+As we discussed in last question, the file __init__.py is used to mark a directory as a Python package. When a directory contains this file, Python treats it as a package that can be imported.
